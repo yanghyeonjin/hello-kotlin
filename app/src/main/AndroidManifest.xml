@@ -3,7 +3,6 @@
     package="com.yanghyeonjin.hellokotlin">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -19,7 +18,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CameraAndCaptureActivity"></activity>
+        <activity android:name=".EmployeeListActivity"></activity>
+        <activity android:name=".CameraAndCaptureActivity" />
         <activity android:name=".WebViewActivity" />
         <activity android:name=".SharedPrefActivity" />
         <activity android:name=".NavigationDrawerActivity" />
@@ -33,13 +33,11 @@
             </intent-filter>
         </activity>
 
-
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="com.yanghyeonjin.hellokotlin.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
-
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />

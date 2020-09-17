@@ -77,6 +77,11 @@ class HongdroidFragment: Fragment() {
             mContext.startActivity(intent)
         }
 
+        binding.btnCh10.setOnClickListener {
+            val intent = Intent(mContext, EmployeeListActivity::class.java)
+            mContext.startActivity(intent)
+        }
+
 
         return view
     }

@@ -23,10 +23,12 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ivHongdroidAvatar">
+            app:layout_constraintTop_toBottomOf="@+id/ivHongdroidAvatar"
+            app:layout_constraintBottom_toBottomOf="parent">
 
             <Button
                 android:id="@+id/btnCh3"
@@ -62,6 +64,12 @@
                 style="@style/App.RoundedButton.Hongdroid"
                 android:layout_marginTop="16dp"
                 android:text="@string/hongdroid_ch9_title" />
+
+            <Button
+                android:id="@+id/btnCh10"
+                style="@style/App.RoundedButton.Hongdroid"
+                android:layout_marginTop="16dp"
+                android:text="@string/hongdroid_ch10_title" />
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
