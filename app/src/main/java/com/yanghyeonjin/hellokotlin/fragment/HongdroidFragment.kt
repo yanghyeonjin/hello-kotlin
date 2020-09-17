@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
+import com.yanghyeonjin.hellokotlin.ListViewActivity
 import com.yanghyeonjin.hellokotlin.R
 import com.yanghyeonjin.hellokotlin.SubActivity
 import com.yanghyeonjin.hellokotlin.databinding.FragmentHongdroidBinding
@@ -50,6 +51,11 @@ class HongdroidFragment: Fragment() {
             val intent = Intent(mContext, SubActivity::class.java)
 
             intent.putExtra("msg", "메시지 받아랏!")
+            mContext.startActivity(intent)
+        }
+
+        binding.btnCh5.setOnClickListener {
+            val intent = Intent(mContext, ListViewActivity::class.java)
             mContext.startActivity(intent)
         }
 

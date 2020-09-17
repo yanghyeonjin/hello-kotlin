@@ -17,16 +17,28 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/btnCh3"
-            style="@style/App.RoundedButton.Hongdroid"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="16dp"
-            android:text="@string/hongdroid_ch3_title"
+            android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ivHongdroidAvatar" />
+            app:layout_constraintTop_toBottomOf="@+id/ivHongdroidAvatar">
+
+            <Button
+                android:id="@+id/btnCh3"
+                style="@style/App.RoundedButton.Hongdroid"
+                android:text="@string/hongdroid_ch3_title"
+                android:layout_marginBottom="16dp"/>
+
+            <Button
+                android:id="@+id/btnCh5"
+                style="@style/App.RoundedButton.Hongdroid"
+                android:text="@string/hongdroid_ch5_title" />
+        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
