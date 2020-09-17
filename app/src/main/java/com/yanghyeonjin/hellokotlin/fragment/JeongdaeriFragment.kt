@@ -1,12 +1,14 @@
 package com.yanghyeonjin.hellokotlin.fragment
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
+import com.yanghyeonjin.hellokotlin.LifeCycleActivity
 import com.yanghyeonjin.hellokotlin.R
 import com.yanghyeonjin.hellokotlin.databinding.FragmentJeongdaeriBinding
 
@@ -39,6 +41,13 @@ class JeongdaeriFragment: Fragment() {
             .load("https://yt3.ggpht.com/a/AATXAJwJaJaSpMBOVf8crMLcPEyqrOy6rGGNM7QR9xjB=s100-c-k-c0xffffffff-no-rj-mo")
             .placeholder(R.drawable.unknown_profile)
             .into(binding.ivJeongdaeriAvatar)
+
+
+        // 강의 화면으로 이동
+        binding.btnCh3.setOnClickListener {
+            val intent = Intent(mContext, LifeCycleActivity::class.java)
+            startActivity(intent)
+        }
 
 
         return view

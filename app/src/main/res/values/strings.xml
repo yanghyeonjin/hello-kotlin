@@ -24,4 +24,9 @@
     <string name="menu_my_page">마이페이지</string>
 
     <string name="open_camera">카메라 실행</string>
+
+
+    <string name="jeongdaeri_ch3_title">생명주기</string>
+
+    <string name="splash_text">Splash 화면이당</string>
 </resources>
