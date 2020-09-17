@@ -3,4 +3,11 @@
 
     <string name="tab_item_hongdroid">홍드로이드</string>
     <string name="tab_item_jeongdaeri">개발하는 정대리</string>
+
+    <string name="hongdroid_ch3_title">Intent 화면 이동 및 데이터 전달</string>
+    
+    
+    
+    <string name="label_arrived_msg">도착한 메시지:</string>
+    <string name="back">뒤로가기</string>
 </resources>
