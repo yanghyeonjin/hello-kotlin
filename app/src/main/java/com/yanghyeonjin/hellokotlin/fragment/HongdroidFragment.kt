@@ -67,6 +67,11 @@ class HongdroidFragment: Fragment() {
             mContext.startActivity(intent)
         }
 
+        binding.btnCh8.setOnClickListener {
+            val intent = Intent(mContext, WebViewActivity::class.java)
+            mContext.startActivity(intent)
+        }
+
 
         return view
     }
