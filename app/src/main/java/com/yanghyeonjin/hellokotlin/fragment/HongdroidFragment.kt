@@ -72,6 +72,11 @@ class HongdroidFragment: Fragment() {
             mContext.startActivity(intent)
         }
 
+        binding.btnCh9.setOnClickListener {
+            val intent = Intent(mContext, CameraAndCaptureActivity::class.java)
+            mContext.startActivity(intent)
+        }
+
 
         return view
     }
