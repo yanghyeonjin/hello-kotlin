@@ -5,7 +5,8 @@
     <string name="tab_item_jeongdaeri">개발하는 정대리</string>
 
     <string name="hongdroid_ch3_title">Intent 화면 이동 및 데이터 전달</string>
-    <string name="hongdroid_ch5_title">ListView</string>
+    <string name="hongdroid_ch5_title">ListView / 커스텀 ListView</string>
+    <string name="hongdroid_ch6_title">네비게이션 메뉴 (Navigation Drawer)</string>
 
 
     <string name="label_arrived_msg">도착한 메시지:</string>
@@ -13,4 +14,8 @@
 
     <string name="label_basic_list">기본 리스트뷰</string>
     <string name="label_custom_list">커스텀 리스트뷰</string>
+
+    <string name="menu_home">홈</string>
+    <string name="menu_search">검색하기</string>
+    <string name="menu_my_page">마이페이지</string>
 </resources>

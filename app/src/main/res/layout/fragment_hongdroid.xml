@@ -31,13 +31,19 @@
             <Button
                 android:id="@+id/btnCh3"
                 style="@style/App.RoundedButton.Hongdroid"
-                android:text="@string/hongdroid_ch3_title"
-                android:layout_marginBottom="16dp"/>
+                android:text="@string/hongdroid_ch3_title" />
 
             <Button
                 android:id="@+id/btnCh5"
                 style="@style/App.RoundedButton.Hongdroid"
+                android:layout_marginTop="16dp"
                 android:text="@string/hongdroid_ch5_title" />
+
+            <Button
+                android:id="@+id/btnCh6"
+                style="@style/App.RoundedButton.Hongdroid"
+                android:layout_marginTop="16dp"
+                android:text="@string/hongdroid_ch6_title" />
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

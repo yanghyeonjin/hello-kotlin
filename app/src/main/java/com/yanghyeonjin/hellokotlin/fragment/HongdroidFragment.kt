@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
 import com.yanghyeonjin.hellokotlin.ListViewActivity
+import com.yanghyeonjin.hellokotlin.NavigationDrawerActivity
 import com.yanghyeonjin.hellokotlin.R
 import com.yanghyeonjin.hellokotlin.SubActivity
 import com.yanghyeonjin.hellokotlin.databinding.FragmentHongdroidBinding
@@ -56,6 +57,11 @@ class HongdroidFragment: Fragment() {
 
         binding.btnCh5.setOnClickListener {
             val intent = Intent(mContext, ListViewActivity::class.java)
+            mContext.startActivity(intent)
+        }
+
+        binding.btnCh6.setOnClickListener {
+            val intent = Intent(mContext, NavigationDrawerActivity::class.java)
             mContext.startActivity(intent)
         }
 
