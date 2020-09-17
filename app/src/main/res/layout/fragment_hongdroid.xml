@@ -44,6 +44,12 @@
                 style="@style/App.RoundedButton.Hongdroid"
                 android:layout_marginTop="16dp"
                 android:text="@string/hongdroid_ch6_title" />
+
+            <Button
+                android:id="@+id/btnCh7"
+                style="@style/App.RoundedButton.Hongdroid"
+                android:layout_marginTop="16dp"
+                android:text="@string/hongdroid_ch7_title" />
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

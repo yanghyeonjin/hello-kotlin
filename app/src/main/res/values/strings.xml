@@ -7,6 +7,7 @@
     <string name="hongdroid_ch3_title">Intent 화면 이동 및 데이터 전달</string>
     <string name="hongdroid_ch5_title">ListView / 커스텀 ListView</string>
     <string name="hongdroid_ch6_title">네비게이션 메뉴 (Navigation Drawer)</string>
+    <string name="hongdroid_ch7_title">SharedPreferences</string>
 
 
     <string name="label_arrived_msg">도착한 메시지:</string>
