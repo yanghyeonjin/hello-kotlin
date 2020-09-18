@@ -25,15 +25,21 @@
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
             android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ivJeongdaeriAvatar"
-            app:layout_constraintBottom_toBottomOf="parent">
+            app:layout_constraintTop_toBottomOf="@+id/ivJeongdaeriAvatar">
 
             <Button
                 android:id="@+id/btnCh3"
                 style="@style/App.RoundedButton.Jeongdaeri"
                 android:text="@string/jeongdaeri_ch3_title" />
+
+            <Button
+                android:id="@+id/btnCh4"
+                style="@style/App.RoundedButton.Jeongdaeri"
+                android:layout_marginTop="16dp"
+                android:text="@string/jeongdaeri_ch4_title" />
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

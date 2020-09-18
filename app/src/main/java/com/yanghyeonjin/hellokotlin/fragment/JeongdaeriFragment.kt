@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
+import com.yanghyeonjin.hellokotlin.LayoutPractice1Activity
 import com.yanghyeonjin.hellokotlin.LifeCycleActivity
 import com.yanghyeonjin.hellokotlin.R
 import com.yanghyeonjin.hellokotlin.databinding.FragmentJeongdaeriBinding
@@ -46,6 +47,11 @@ class JeongdaeriFragment: Fragment() {
         // 강의 화면으로 이동
         binding.btnCh3.setOnClickListener {
             val intent = Intent(mContext, LifeCycleActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnCh4.setOnClickListener {
+            val intent = Intent(mContext, LayoutPractice1Activity::class.java)
             startActivity(intent)
         }
 
