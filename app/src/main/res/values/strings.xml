@@ -29,6 +29,8 @@
     <string name="jeongdaeri_ch3_title">생명주기</string>
     <string name="jeongdaeri_ch4_title">레이아웃 연습1</string>
     <string name="jeongdaeri_ch5_title">레이아웃 연습2</string>
+    <string name="jeongdaeri_ch7_title">Lottie Animation</string>
+
 
     <string name="splash_text">Splash 화면이당</string>
 
@@ -46,4 +48,7 @@
     <string name="login_with_facebook">Continue with facebook</string>
     <string name="already_have_account">Already have an account?</string>
     <string name="login">Login</string>
+
+    <string name="label_lottie_basic">Lottie Animation 기본 (Full 재생)</string>
+    <string name="label_lottie_custom">Lottie Animation 커스텀 (클릭하세요!)</string>
 </resources>
