@@ -59,6 +59,10 @@ class JeongdaeriFragment: Fragment() {
             val intent = Intent(mContext, LottieAnimationActivity::class.java)
             startActivity(intent)
         }
+        binding.btnAdMob.setOnClickListener {
+            val intent = Intent(mContext, AdMobActivity::class.java)
+            startActivity(intent)
+        }
 
 
         return view
