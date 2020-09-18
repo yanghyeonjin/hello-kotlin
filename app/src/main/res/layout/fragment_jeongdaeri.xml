@@ -57,6 +57,11 @@
                 style="@style/App.RoundedButton.Jeongdaeri"
                 android:layout_marginTop="16dp"
                 android:text="@string/jeongdaeri_admob_title" />
+            <Button
+                android:id="@+id/btnShakeDetect"
+                style="@style/App.RoundedButton.Jeongdaeri"
+                android:layout_marginTop="16dp"
+                android:text="@string/jeongdaeri_shake_detect_title" />
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

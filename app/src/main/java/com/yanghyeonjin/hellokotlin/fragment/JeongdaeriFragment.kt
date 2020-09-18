@@ -63,6 +63,10 @@ class JeongdaeriFragment: Fragment() {
             val intent = Intent(mContext, AdMobActivity::class.java)
             startActivity(intent)
         }
+        binding.btnShakeDetect.setOnClickListener {
+            val intent = Intent(mContext, ShakeDetectActivity::class.java)
+            startActivity(intent)
+        }
 
 
         return view

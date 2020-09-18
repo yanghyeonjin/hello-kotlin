@@ -18,7 +18,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AdMobActivity"></activity>
+        <activity android:name=".ShakeDetectActivity"></activity>
+        <activity android:name=".AdMobActivity" />
         <activity android:name=".LottieAnimationActivity" />
         <activity android:name=".LayoutPractice2Activity" />
         <activity android:name=".LayoutPractice1Activity" />
@@ -46,9 +47,7 @@
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
-        </provider>
-
-        <!-- 애드몹 설정 -->
+        </provider> <!-- 애드몹 설정 -->
         <!-- Sample AdMob App ID: ca-app-pub-3940256099942544~3347511713 -->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
