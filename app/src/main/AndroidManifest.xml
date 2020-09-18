@@ -18,7 +18,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ShakeDetectActivity"></activity>
+        <activity android:name=".CompletionBlockActivity"></activity>
+        <activity android:name=".ShakeDetectActivity" />
         <activity android:name=".AdMobActivity" />
         <activity android:name=".LottieAnimationActivity" />
         <activity android:name=".LayoutPractice2Activity" />

@@ -62,6 +62,11 @@
                 style="@style/App.RoundedButton.Jeongdaeri"
                 android:layout_marginTop="16dp"
                 android:text="@string/jeongdaeri_shake_detect_title" />
+            <Button
+                android:id="@+id/btnCompletionBlock"
+                style="@style/App.RoundedButton.Jeongdaeri"
+                android:layout_marginTop="16dp"
+                android:text="@string/jeongdaeri_completion_block_title" />
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

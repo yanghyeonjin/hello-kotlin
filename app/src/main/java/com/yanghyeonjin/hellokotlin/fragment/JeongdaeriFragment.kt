@@ -67,6 +67,10 @@ class JeongdaeriFragment: Fragment() {
             val intent = Intent(mContext, ShakeDetectActivity::class.java)
             startActivity(intent)
         }
+        binding.btnCompletionBlock.setOnClickListener {
+            val intent = Intent(mContext, CompletionBlockActivity::class.java)
+            startActivity(intent)
+        }
 
 
         return view
