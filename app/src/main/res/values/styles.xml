@@ -31,4 +31,14 @@
         <item name="android:background">@drawable/btn_rounded_border_orange</item>
     </style>
 
+    <!-- 레이아웃 연습2 rounded button -->
+    <style name="App.RoundedButton.LayoutPractice2" parent="Widget.AppCompat.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
 </resources>

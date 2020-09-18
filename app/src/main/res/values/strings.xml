@@ -28,6 +28,7 @@
 
     <string name="jeongdaeri_ch3_title">생명주기</string>
     <string name="jeongdaeri_ch4_title">레이아웃 연습1</string>
+    <string name="jeongdaeri_ch5_title">레이아웃 연습2</string>
 
     <string name="splash_text">Splash 화면이당</string>
 
@@ -39,4 +40,10 @@
     <string name="flights_board_from_2">AMMAN</string>
     <string name="flights_board_to_1">DBX</string>
     <string name="flights_board_to_2">DUBAI</string>
+
+    <string name="greet">Get the life you want!\nSave more money.</string>
+    <string name="create_account">Create free account</string>
+    <string name="login_with_facebook">Continue with facebook</string>
+    <string name="already_have_account">Already have an account?</string>
+    <string name="login">Login</string>
 </resources>

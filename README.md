@@ -6,7 +6,7 @@ Android Kotlin 예제 모음
 |------|---|
 |#3 Intent 화면이동 및 데이터 전달|#3 생명주기|
 |#5 ListView / 커스텀 ListView|#4 레이아웃 연습1|
-|#6 네비게이션 메뉴 (Navigation Drawer)||
+|#6 네비게이션 메뉴 (Navigation Drawer)|#5 레이아웃 연습2|
 |#7 SharedPreferences||
 |#8 WebView||
 |#9 카메라 실행 and 찍은 사진 가져오기||
