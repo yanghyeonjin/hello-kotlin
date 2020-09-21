@@ -79,6 +79,10 @@ class JeongdaeriFragment: Fragment() {
             val intent = Intent(mContext, RecyclerViewActivity::class.java)
             startActivity(intent)
         }
+        binding.btnCh9.setOnClickListener {
+            val intent = Intent(mContext, CustomDialogActivity::class.java)
+            startActivity(intent)
+        }
 
 
         return view
