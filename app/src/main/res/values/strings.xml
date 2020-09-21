@@ -33,6 +33,7 @@
     <string name="jeongdaeri_admob_title">구글 AdMob</string>
     <string name="jeongdaeri_shake_detect_title">동작센서, 흔들림(Shake) 감지하기</string>
     <string name="jeongdaeri_completion_block_title">Completion Block (비동기)</string>
+    <string name="jeongdaeri_ch8_title">생성자</string>
 
 
     <string name="splash_text">Splash 화면이당</string>
@@ -56,4 +57,12 @@
     <string name="label_lottie_custom">Lottie Animation 커스텀 (클릭하세요!)</string>
 
     <string name="call_method">함수 호출하기</string>
+
+    <string name="label_basic_constructor">기본 생성자</string>
+    <string name="label_constructor_with_params">매개변수가 있는 생성자</string>
+    <string name="label_flexible_constructor">더 유연한 생성자</string>
+    <string name="label_name">이름:</string>
+    <string name="label_age">나이:</string>
+    <string name="label_is_married">결혼여부:</string>
+    <string name="label_nickname">닉네임:</string>
 </resources>

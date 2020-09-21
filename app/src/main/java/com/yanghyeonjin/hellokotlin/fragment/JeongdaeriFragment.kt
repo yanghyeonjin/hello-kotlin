@@ -71,6 +71,10 @@ class JeongdaeriFragment: Fragment() {
             val intent = Intent(mContext, CompletionBlockActivity::class.java)
             startActivity(intent)
         }
+        binding.btnCh8.setOnClickListener {
+            val intent = Intent(mContext, ConstructorActivity::class.java)
+            startActivity(intent)
+        }
 
 
         return view
