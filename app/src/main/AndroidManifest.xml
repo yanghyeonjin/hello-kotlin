@@ -19,7 +19,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SingletonActivity"></activity>
+        <activity android:name=".BottomNavigationActivity"></activity>
+        <activity android:name=".SingletonActivity" />
         <activity android:name=".CustomDialogActivity" />
         <activity android:name=".RecyclerViewActivity" />
         <activity android:name=".ConstructorActivity" />

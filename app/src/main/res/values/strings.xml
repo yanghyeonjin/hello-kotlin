@@ -37,6 +37,7 @@
     <string name="jeongdaeri_recycler_view_title">리사이클러뷰</string>
     <string name="jeongdaeri_ch9_title">커스텀 다이얼로그</string>
     <string name="jeongdaeri_ch10_title">싱글턴</string>
+    <string name="jeongdaeri_bottom_navigation_title">Bottom Navigation</string>
 
 
     <string name="splash_text">Splash 화면이당</string>
@@ -80,4 +81,8 @@
     <string name="label_singleton_class">Singleton Class</string>
     <string name="label_normal_db_helper">Normal DB Helper</string>
     <string name="label_singleton_db_helper">Singleton DB Helper</string>
+
+    <string name="tab_home">홈</string>
+    <string name="tab_shopping_cart">장바구니</string>
+    <string name="tab_my_page">마이페이지</string>
 </resources>
