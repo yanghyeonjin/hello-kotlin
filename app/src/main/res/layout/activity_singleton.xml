@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SingletonActivity"
+    android:padding="48dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/btnNormalClass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_normal_class"
+            android:layout_marginBottom="8dp"
+            android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/btnSingletonClass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_singleton_class"
+            android:layout_marginBottom="8dp"
+            android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/btnNormalDBHelper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_normal_db_helper"
+            android:layout_marginBottom="8dp"
+            android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/btnSingletonDBHelper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_singleton_db_helper"
+            android:layout_marginBottom="48dp"
+            android:textAllCaps="false"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_class_a"/>
+        <TextView
+            android:id="@+id/tvClassA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_class_b"/>
+        <TextView
+            android:id="@+id/tvClassB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -83,6 +83,10 @@ class JeongdaeriFragment: Fragment() {
             val intent = Intent(mContext, CustomDialogActivity::class.java)
             startActivity(intent)
         }
+        binding.btnCh10.setOnClickListener {
+            val intent = Intent(mContext, SingletonActivity::class.java)
+            startActivity(intent)
+        }
 
 
         return view

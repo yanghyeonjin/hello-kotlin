@@ -36,6 +36,7 @@
     <string name="jeongdaeri_ch8_title">생성자</string>
     <string name="jeongdaeri_recycler_view_title">리사이클러뷰</string>
     <string name="jeongdaeri_ch9_title">커스텀 다이얼로그</string>
+    <string name="jeongdaeri_ch10_title">싱글턴</string>
 
 
     <string name="splash_text">Splash 화면이당</string>
@@ -72,4 +73,11 @@
     <string name="dialog_description">안녕하세요!\n구독!좋아요!\n부탁드립니다!!</string>
     <string name="dialog_btn_subscribe">구독!</string>
     <string name="dialog_btn_like">좋아요!</string>
+
+    <string name="label_class_a">a:</string>
+    <string name="label_class_b">b:</string>
+    <string name="label_normal_class">Normal Class</string>
+    <string name="label_singleton_class">Singleton Class</string>
+    <string name="label_normal_db_helper">Normal DB Helper</string>
+    <string name="label_singleton_db_helper">Singleton DB Helper</string>
 </resources>
