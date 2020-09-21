@@ -91,6 +91,10 @@ class JeongdaeriFragment: Fragment() {
             val intent = Intent(mContext, BottomNavigationActivity::class.java)
             startActivity(intent)
         }
+        binding.btnIntro.setOnClickListener {
+            val intent = Intent(mContext, IntroActivity::class.java)
+            startActivity(intent)
+        }
 
 
         return view

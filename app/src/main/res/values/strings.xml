@@ -38,6 +38,7 @@
     <string name="jeongdaeri_ch9_title">커스텀 다이얼로그</string>
     <string name="jeongdaeri_ch10_title">싱글턴</string>
     <string name="jeongdaeri_bottom_navigation_title">Bottom Navigation</string>
+    <string name="jeongdaeri_intro_title">ViewPager2 (인트로 슬라이드 만들기)</string>
 
 
     <string name="splash_text">Splash 화면이당</string>
