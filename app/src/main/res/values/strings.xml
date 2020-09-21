@@ -39,6 +39,7 @@
     <string name="jeongdaeri_ch10_title">싱글턴</string>
     <string name="jeongdaeri_bottom_navigation_title">Bottom Navigation</string>
     <string name="jeongdaeri_intro_title">ViewPager2 (인트로 슬라이드 만들기)</string>
+    <string name="jeongdaeri_ch11_title">API</string>
 
 
     <string name="splash_text">Splash 화면이당</string>
@@ -86,4 +87,9 @@
     <string name="tab_home">홈</string>
     <string name="tab_shopping_cart">장바구니</string>
     <string name="tab_my_page">마이페이지</string>
+
+    <string name="radio_search_photo">사진검색</string>
+    <string name="radio_search_user">사용자검색</string>
+    <string name="helper_filter">검색어를 입력해주세요</string>
+    <string name="label_search">검색</string>
 </resources>

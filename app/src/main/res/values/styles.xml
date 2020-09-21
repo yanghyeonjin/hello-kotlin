@@ -10,6 +10,16 @@
         <item name="android:fontFamily">@font/nexon_lv1_gothic</item>
     </style>
 
+    <style name="AppMaterialTheme" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!-- 폰트 설정 -->
+        <item name="android:fontFamily">@font/nexon_lv1_gothic</item>
+    </style>
+
 
     <!-- 예제 넘어가는 버튼 -->
     <style name="App.RoundedButton.Hongdroid" parent="Widget.AppCompat.Button">

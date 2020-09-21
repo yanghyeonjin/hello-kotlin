@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollViewMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ApiActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivUnSplash"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="48dp"
+            android:src="@drawable/ic_smile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/rgFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivUnSplash">
+
+            <RadioButton
+                android:id="@+id/radioSearchPhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:checked="true"
+                android:text="@string/radio_search_photo" />
+
+            <RadioButton
+                android:id="@+id/radioSearchUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/radio_search_user" />
+        </RadioGroup>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/outlineEtSearch"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:hint="@string/radio_search_photo"
+            app:counterEnabled="true"
+            app:counterMaxLength="12"
+            app:endIconMode="clear_text"
+            app:helperText="@string/helper_filter"
+            app:helperTextEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rgFilter"
+            app:startIconDrawable="@drawable/ic_image_24">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:inputType="text"
+                android:maxLength="12" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <FrameLayout
+            android:id="@+id/frameSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/outlineEtSearch">
+
+            <Button
+                android:id="@+id/btnSearch"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="@string/label_search"
+                android:layout_gravity="center"
+                android:textStyle="bold" />
+
+            <ProgressBar
+                android:layout_gravity="center"
+                android:id="@+id/progress"
+                android:layout_marginStart="50dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:indeterminateTint="#000"
+                android:visibility="invisible" />
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

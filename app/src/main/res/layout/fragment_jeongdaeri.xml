@@ -97,6 +97,11 @@
                 style="@style/App.RoundedButton.Jeongdaeri"
                 android:layout_marginTop="16dp"
                 android:text="@string/jeongdaeri_intro_title" />
+            <Button
+                android:id="@+id/btnCh11"
+                style="@style/App.RoundedButton.Jeongdaeri"
+                android:layout_marginTop="16dp"
+                android:text="@string/jeongdaeri_ch11_title" />
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
