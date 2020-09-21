@@ -72,6 +72,11 @@
                 style="@style/App.RoundedButton.Jeongdaeri"
                 android:layout_marginTop="16dp"
                 android:text="@string/jeongdaeri_ch8_title" />
+            <Button
+                android:id="@+id/btnRecyclerView"
+                style="@style/App.RoundedButton.Jeongdaeri"
+                android:layout_marginTop="16dp"
+                android:text="@string/jeongdaeri_recycler_view_title" />
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

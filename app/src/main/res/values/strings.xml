@@ -34,6 +34,7 @@
     <string name="jeongdaeri_shake_detect_title">동작센서, 흔들림(Shake) 감지하기</string>
     <string name="jeongdaeri_completion_block_title">Completion Block (비동기)</string>
     <string name="jeongdaeri_ch8_title">생성자</string>
+    <string name="jeongdaeri_recycler_view_title">리사이클러뷰</string>
 
 
     <string name="splash_text">Splash 화면이당</string>
