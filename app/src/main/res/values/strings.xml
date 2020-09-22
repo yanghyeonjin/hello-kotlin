@@ -92,8 +92,9 @@
     <string name="radio_search_user">사용자검색</string>
     <string name="helper_filter">검색어를 입력해주세요</string>
     <string name="label_search">검색</string>
-
     <string name="content_description_search">사진을 검색한다.</string>
     <string name="label_more">더보기</string>
     <string name="content_description_more">더보기 메뉴</string>
+    <string name="label_save_search_history">검색어 저장</string>
+    <string name="label_delete_all_history">전체삭제</string>
 </resources>
