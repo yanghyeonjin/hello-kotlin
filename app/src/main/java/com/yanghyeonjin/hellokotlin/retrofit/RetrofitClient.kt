@@ -1,6 +1,10 @@
 package com.yanghyeonjin.hellokotlin.retrofit
 
+import android.os.Handler
+import android.os.Looper
 import android.util.Log
+import android.widget.Toast
+import com.yanghyeonjin.hellokotlin.util.App
 import com.yanghyeonjin.hellokotlin.util.Constants.TAG
 import com.yanghyeonjin.hellokotlin.util.Key
 import com.yanghyeonjin.hellokotlin.util.isJsonArray
@@ -77,7 +81,18 @@ object RetrofitClient {
                     .method(originalRequest.method, originalRequest.body)
                     .build()
 
-                return chain.proceed(finalRequest)
+                // 응답 결과 코드가 200이 아니면 Toast 메시지
+                val response = chain.proceed(finalRequest)
+                if (response.code != 200) {
+
+                    // Toast 메시지는 UI 쓰레드 (메인 쓰레드에서 돌려야 함.)
+                    Handler(Looper.getMainLooper()).post {
+                        Toast.makeText(App.instance, "${response.code} 에러입니다.", Toast.LENGTH_SHORT).show()
+                    }
+
+                }
+
+                return response
             }
         })
         client.addInterceptor(baseParameterInterceptor)
@@ -91,7 +106,7 @@ object RetrofitClient {
         // 실패했을 때 다시 요청할 것인지?
         client.retryOnConnectionFailure(true)
 
-        
+
 
         // 레트로핏 빌더를 통해 인스턴스 생성
         if (retrofitClient == null) {

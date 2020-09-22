@@ -1,19 +1,16 @@
 package com.yanghyeonjin.hellokotlin
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
-import android.text.Editable
-import android.text.TextWatcher
 import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.core.content.ContextCompat
-import androidx.core.widget.addTextChangedListener
 import com.yanghyeonjin.hellokotlin.databinding.ActivityApiBinding
 import com.yanghyeonjin.hellokotlin.retrofit.RetrofitManager
 import com.yanghyeonjin.hellokotlin.util.Constants
-import com.yanghyeonjin.hellokotlin.util.RESPONSE_STATE
+import com.yanghyeonjin.hellokotlin.util.RESPONSE_STATUS
 import com.yanghyeonjin.hellokotlin.util.SEARCH_TYPE
 import com.yanghyeonjin.hellokotlin.util.onMyTextChanged
 
@@ -66,21 +63,34 @@ class ApiActivity : AppCompatActivity() {
         binding.btnSearch.setOnClickListener {
             binding.progress.visibility = View.VISIBLE
 
-            RetrofitManager.instance.searchPhotos(binding.etSearch.text.toString()) { responseState, responseBody ->
+            val userSearchInput = binding.etSearch.text.toString()
+
+            RetrofitManager.instance.searchPhotos(userSearchInput) { responseState, responseBody ->
                 when (responseState) {
-                    RESPONSE_STATE.OKAY -> {
+                    RESPONSE_STATUS.OKAY -> {
                         Log.e(TAG, "API 호출 성공: $responseBody")
+
+                        // 결과 화면으로 보여준다
+                        val intent = Intent(this, PhotoCollectionActivity::class.java)
+                        val bundle = Bundle()
+                        bundle.putSerializable("photoArrayList", responseBody)
+                        intent.putExtra("bundlePhoto", bundle)
+                        intent.putExtra("searchTerm", userSearchInput)
+
+                        startActivity(intent)
                     }
-                    RESPONSE_STATE.FAIL -> {
+                    RESPONSE_STATUS.FAIL -> {
                         Toast.makeText(this, "API 호출 에러입니다.", Toast.LENGTH_SHORT).show()
-                        Log.e(TAG, "API 호출 성공: $responseBody")
+                        Log.e(TAG, "API 호출 실패: $responseBody")
+                    }
+                    RESPONSE_STATUS.NO_CONTENT -> {
+                        Toast.makeText(this, "검색 결과가 없습니다.", Toast.LENGTH_SHORT).show()
                     }
                 }
-            }
 
-            Handler().postDelayed({
+                binding.etSearch.setText("")
                 binding.progress.visibility = View.INVISIBLE
-            }, 1500)
+            }
         }
     }
 }

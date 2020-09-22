@@ -1,4 +1,4 @@
-package com.yanghyeonjin.hellokotlin
+package com.yanghyeonjin.hellokotlin.util
 
 import android.app.Application
 

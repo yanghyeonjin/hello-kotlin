@@ -4,7 +4,7 @@ import android.util.Log
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.yanghyeonjin.hellokotlin.App
+import com.yanghyeonjin.hellokotlin.util.App
 import com.yanghyeonjin.hellokotlin.R
 import com.yanghyeonjin.hellokotlin.listener.RecyclerViewInterface
 import com.yanghyeonjin.hellokotlin.model.RecyclerViewModel
