@@ -7,18 +7,24 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
 import android.view.View
+import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.core.widget.addTextChangedListener
 import com.yanghyeonjin.hellokotlin.databinding.ActivityApiBinding
+import com.yanghyeonjin.hellokotlin.retrofit.RetrofitManager
 import com.yanghyeonjin.hellokotlin.util.Constants
+import com.yanghyeonjin.hellokotlin.util.RESPONSE_STATE
 import com.yanghyeonjin.hellokotlin.util.SEARCH_TYPE
 import com.yanghyeonjin.hellokotlin.util.onMyTextChanged
 
 class ApiActivity : AppCompatActivity() {
     private lateinit var binding: ActivityApiBinding
 
-
     private var currentSearchType: SEARCH_TYPE = SEARCH_TYPE.PHOTO
+
+    companion object {
+        const val TAG: String = "로그"
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,8 +62,21 @@ class ApiActivity : AppCompatActivity() {
         }
 
 
+        // 검색 버튼 클릭
         binding.btnSearch.setOnClickListener {
             binding.progress.visibility = View.VISIBLE
+
+            RetrofitManager.instance.searchPhotos(binding.etSearch.text.toString()) { responseState, responseBody ->
+                when (responseState) {
+                    RESPONSE_STATE.OKAY -> {
+                        Log.e(TAG, "API 호출 성공: $responseBody")
+                    }
+                    RESPONSE_STATE.FAIL -> {
+                        Toast.makeText(this, "API 호출 에러입니다.", Toast.LENGTH_SHORT).show()
+                        Log.e(TAG, "API 호출 성공: $responseBody")
+                    }
+                }
+            }
 
             Handler().postDelayed({
                 binding.progress.visibility = View.INVISIBLE
