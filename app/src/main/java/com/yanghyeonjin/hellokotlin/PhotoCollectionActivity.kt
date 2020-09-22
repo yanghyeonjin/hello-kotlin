@@ -17,6 +17,11 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.yanghyeonjin.hellokotlin.adapter.PhotoGridViewAdapter
 import com.yanghyeonjin.hellokotlin.databinding.ActivityPhotoCollectionBinding
 import com.yanghyeonjin.hellokotlin.model.Photo
+import com.yanghyeonjin.hellokotlin.model.SearchHistory
+import com.yanghyeonjin.hellokotlin.util.SharedPrefManager
+import com.yanghyeonjin.hellokotlin.util.getFormattedString
+import java.util.*
+import kotlin.collections.ArrayList
 
 class PhotoCollectionActivity : AppCompatActivity(),
                                 SearchView.OnQueryTextListener,
@@ -30,6 +35,9 @@ class PhotoCollectionActivity : AppCompatActivity(),
     // 서치뷰와 서치뷰의 EditText
     private lateinit var searchView: SearchView
     private lateinit var etSearchView: EditText
+
+    // 검색 목록 담을 그릇
+    private var searchHistoryList = ArrayList<SearchHistory>()
 
     companion object {
         const val TAG: String = "로그"
@@ -68,6 +76,13 @@ class PhotoCollectionActivity : AppCompatActivity(),
 
         binding.switchSearchHistorySaveMode.setOnCheckedChangeListener(this)
         binding.btnDeleteAllHistory.setOnClickListener(this)
+
+
+        // 저장된 검색기록 가져오기
+        this.searchHistoryList = SharedPrefManager.getSearchHistoryList() as ArrayList<SearchHistory>
+        this.searchHistoryList.forEach {
+            Log.e(TAG, "저장된 검색기록: ${it.term}, ${it.timestamp}")
+        }
 
 
     }
@@ -116,10 +131,12 @@ class PhotoCollectionActivity : AppCompatActivity(),
         // 검색한 결과로 app bar title 다시 바꾸기
         if (!query.isNullOrEmpty()) {
             binding.topAppBar.title = query
-        }
 
-//        this.searchView.setQuery("", false)
-//        this.searchView.clearFocus()
+            val searchHistory = SearchHistory(term = query, timestamp = Date().getFormattedString())
+            this.searchHistoryList.add(searchHistory)
+
+            SharedPrefManager.saveSearchHistoryList(searchHistoryList)
+        }
 
         binding.topAppBar.collapseActionView()
 

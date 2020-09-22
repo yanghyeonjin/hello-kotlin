@@ -18,4 +18,4 @@ Android Kotlin 예제 모음
 ||Bottom Navigation|
 ||ViewPager2 (인트로 슬라이드 만들기)|
 ||#11 #12 #13 API, Retrofit2, okhttp Interceptor, 그리드뷰로 결과 출력|
-||#14 SearchView|
+||#14 #15 SearchView, SharedPreferences|
