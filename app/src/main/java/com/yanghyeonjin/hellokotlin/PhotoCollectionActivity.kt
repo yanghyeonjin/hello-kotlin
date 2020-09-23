@@ -15,6 +15,8 @@ import android.widget.Toast
 import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.jakewharton.rxbinding4.InitialValueObservable
+import com.jakewharton.rxbinding4.widget.textChanges
 import com.yanghyeonjin.hellokotlin.adapter.PhotoGridViewAdapter
 import com.yanghyeonjin.hellokotlin.adapter.SearchHistoryAdapter
 import com.yanghyeonjin.hellokotlin.databinding.ActivityPhotoCollectionBinding
@@ -25,7 +27,12 @@ import com.yanghyeonjin.hellokotlin.retrofit.RetrofitManager
 import com.yanghyeonjin.hellokotlin.util.RESPONSE_STATUS
 import com.yanghyeonjin.hellokotlin.util.SharedPrefManager
 import com.yanghyeonjin.hellokotlin.util.getFormattedString
+import io.reactivex.rxjava3.disposables.CompositeDisposable
+import io.reactivex.rxjava3.disposables.Disposable
+import io.reactivex.rxjava3.kotlin.subscribeBy
+import io.reactivex.rxjava3.schedulers.Schedulers
 import java.util.*
+import java.util.concurrent.TimeUnit
 import kotlin.collections.ArrayList
 
 class PhotoCollectionActivity : AppCompatActivity(),
@@ -45,6 +52,10 @@ class PhotoCollectionActivity : AppCompatActivity(),
     // 검색 목록 담을 그릇
     private var searchHistoryList = ArrayList<SearchHistory>()
     private lateinit var searchHistoryAdapter: SearchHistoryAdapter
+
+
+    // Rx
+    private var myCompositeDisposable = CompositeDisposable()
 
     companion object {
         const val TAG: String = "로그"
@@ -90,6 +101,11 @@ class PhotoCollectionActivity : AppCompatActivity(),
         binding.btnDeleteAllHistory.setOnClickListener(this)
     }
 
+    override fun onDestroy() {
+        this.myCompositeDisposable.clear()
+        super.onDestroy()
+    }
+
     private fun setUpSearchHistoryRecyclerView(searchHistoryList: ArrayList<SearchHistory>) {
         searchHistoryAdapter = SearchHistoryAdapter(this)
         searchHistoryAdapter.submitList(searchHistoryList)
@@ -129,7 +145,7 @@ class PhotoCollectionActivity : AppCompatActivity(),
                 when(hasExpanded) {
                     true -> {
                         Log.e(TAG, "PhotoCollectionActivity - 서치뷰가 열렸다.")
-                        binding.linearSearchHistory.visibility = View.VISIBLE
+                        // binding.linearSearchHistory.visibility = View.VISIBLE
                     }
                     false -> {
                         Log.e(TAG, "PhotoCollectionActivity - 서치뷰가 닫혔다.")
@@ -141,6 +157,30 @@ class PhotoCollectionActivity : AppCompatActivity(),
 
 
             etSearchView = this.findViewById(androidx.appcompat.R.id.search_src_text) // 서치뷰에서 EditText를 가져온다.
+
+            // 서치뷰의 EditText 옵저버블
+            val editTextChangeObservable = etSearchView.textChanges()
+
+            val searchEditTextSubscription: Disposable =
+                editTextChangeObservable
+                    .debounce(1000, TimeUnit.MILLISECONDS)
+                    .subscribeOn(Schedulers.io())
+                    .subscribeBy(
+                        onNext = {
+                            Log.e("Rx", "onNext: $it")
+
+                            if (it.isNotEmpty()) {
+                                searchPhotoApiCall(it.toString())
+                            }
+                        },
+                        onComplete = {
+                            Log.e("Rx", "onComplete")
+                        },
+                        onError = {
+                            Log.e("Rx", "onError: $it")
+                        }
+                    )
+            myCompositeDisposable.add(searchEditTextSubscription)
 
         }
 
@@ -181,6 +221,10 @@ class PhotoCollectionActivity : AppCompatActivity(),
         if (userInputText.count() == 12) {
             Toast.makeText(this, "검색어는 12자까지만 입력가능합니다.", Toast.LENGTH_SHORT).show()
         }
+
+//        if (userInputText.length in 1..12) {
+//            searchPhotoApiCall(userInputText)
+//        }
 
         return true
     }
