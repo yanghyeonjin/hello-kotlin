@@ -40,6 +40,7 @@
     <string name="jeongdaeri_bottom_navigation_title">Bottom Navigation</string>
     <string name="jeongdaeri_intro_title">ViewPager2 (인트로 슬라이드 만들기)</string>
     <string name="jeongdaeri_ch11_title">API</string>
+    <string name="jeongdaeri_livedata_viewmodel_title">LiveData와 ViewModel</string>
 
 
     <string name="splash_text">Splash 화면이당</string>

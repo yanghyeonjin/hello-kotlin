@@ -99,6 +99,10 @@ class JeongdaeriFragment: Fragment() {
             val intent = Intent(mContext, ApiActivity::class.java)
             startActivity(intent)
         }
+        binding.btnLiveDataViewModel.setOnClickListener {
+            val intent = Intent(mContext, LiveDataViewModelActivity::class.java)
+            startActivity(intent)
+        }
 
 
         return view
